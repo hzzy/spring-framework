@@ -10,8 +10,8 @@ public class Entrance {
 
         String url = "//Users/zy/gitcode/local/spring-framework/spring-demo/src/main/resources/spring/spring-config.xml";
         FileSystemXmlApplicationContext applicationContext = new FileSystemXmlApplicationContext(url);
+        applicationContext.start();
         BoyFriendService boyFriendService = applicationContext.getBean(BoyFriendService.class);
-
         boyFriendService.smoke("zhong hua");
     }
 }
